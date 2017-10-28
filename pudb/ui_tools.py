@@ -31,7 +31,7 @@ def make_canvas(txt, attr, maxcol, fill_attr=None):
         def get_byte_line_attr(line, line_attr):
             i = 0
             for label, column_count in line_attr:
-                byte_count = len(line[i:i+column_count].encode(_target_encoding))
+                byte_count = len(line[i:i+column_count])
                 i += column_count
                 yield label, byte_count
 
